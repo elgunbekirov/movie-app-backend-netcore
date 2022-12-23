@@ -81,3 +81,31 @@ Many solutions will also reference a separate **Shared Kernel** project/package.
 The entry point of the application is the ASP.NET Core Web API project. It currently uses the default  ASP.NET Core API project template code. This includes its configuration system, which uses the default `appsettings.json` file plus environment variables and configured services. The project delegates to the `Infrastructure` project.
 
 
+## How to setup SQLSERVER DB?
+
+In order to run backend API you need to choose one of the bellow step:
+
+  1.  Open PowerShell and go to the project directory and run bellow command
+      
+      docker compose up 
+
+      Note :  you should have docker desktop installed on your system.
+
+  2.  Open PowerShell and go to the project directory and run bellow command
+      
+      docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest    
+
+      Note :  you should have docker desktop installed on your system.
+  
+  3.  Install MSSQL Server seperately on your system 
+
+
+## How to run backend API?
+
+  Please open movie-backend application an Visual Studio and Run MovieApp.Api
+  
+  After the run sagger page will be open on your browser automatically
+   
+       https://localhost:7072/swagger/index.html
+     
+       
